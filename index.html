@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Python Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Docs</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Installation">Installation</a>
+        <a class="nav-link" href="#Basic_Syntax">Basic Syntax</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Control_Structures">Control Structures</a>
+        <a class="nav-link" href="#Functions">Functions</a>
+        <a class="nav-link" href="#Modules">Modules</a>
+        <a class="nav-link" href="#File_Handling">File Handling</a>
+        <a class="nav-link" href="#Exception_Handling">Exception Handling</a>
+        <a class="nav-link" href="#Object-Oriented_Programming">Object-Oriented Programming</a>
+        <a class="nav-link" href="#Advanced_Topics">Advanced Topics</a>
+        <a class="nav-link" href="#Popular_Libraries">Popular Libraries</a>
+        <a class="nav-link" href="#Testing_in_Python">Testing in Python</a>
+        <a class="nav-link" href="#Examples">Examples</a>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Python is a high-level, interpreted programming language that has gained immense popularity due to its simplicity and readability. It was created by Guido van Rossum and was first released in 1991. Python is known for its clean and easy-to-understand syntax, which makes it an ideal choice for beginners while also offering powerful tools for experienced developers.</p>
+            <p>Python is an open-source language, meaning its source code is freely available to the public. This has helped it evolve rapidly with a vast community contributing to its growth. Over the years, Python has become one of the most widely used languages in the world, powering everything from web development and data analysis to machine learning and artificial intelligence.</p>
+            <p>One of Python's standout features is its support for multiple programming paradigms. It can be used for object-oriented programming (OOP), procedural programming, and even functional programming. This versatility allows developers to choose the best approach for the task at hand, which is one of the reasons Python is so popular in various fields, including software engineering, web development, scientific computing, and automation.</p>
+        </section>
+        <section id="Installation" class="main-section">
+            <header>Installation</header>
+            <p>Python can be downloaded from the official website: <a href="https://www.python.org/downloads/">python.org</a>. After downloading, follow the installation instructions for your operating system.</p>
+        </section>
+        <section id="Basic_Syntax" class="main-section">
+            <header>Basic Syntax</header>
+            <pre><code>print("Hello, World!")</code></pre>
+        </section>
+        <section id="Data_Types" class="main-section">
+            <header>Data Types</header>
+            <p>Python, as a dynamically typed language, allows variables to hold values of different types without the need to explicitly declare their type. Python provides several built-in data types to support various kinds of operations. The most commonly used data types in Python include integers, floats, strings, lists, tuples, sets, and dictionaries.</p>
+            <h4>1. Integers (int)</h4>
+            <p>Integers are whole numbers, which can be either positive or negative, and can range from small to very large values, depending on the system's architecture. Python provides built-in support for large integers, which makes it stand out in handling computations that involve big numbers.</p>
+            <pre><code>x = 5
+y = -10</code></pre>
+            <h4>2. Floating-Point Numbers (float)</h4>
+            <p>Floating-point numbers, or simply floats, represent real numbers and are written with a decimal point. They are used to handle calculations involving decimals, such as scientific calculations or precise measurements. In Python, you can perform operations with floats and even use them for division.</p>
+            <pre><code>pi = 3.14159
+temperature = -12.5</code></pre>
+            <h4>3. Strings (str)</h4>
+            <p>Strings are sequences of characters enclosed in single, double, or triple quotes. Python strings are immutable, meaning their content cannot be changed after they are created. They are commonly used to store text and can be manipulated with various string methods, such as concatenation, slicing, and formatting.</p>
+            <pre><code>name = "John Doe"
+greeting = 'Hello, World!'</code></pre>
+            <h4>4. Lists (list)</h4>
+            <p>Lists are ordered collections of items, which can be of any data type. Lists are mutable, meaning their elements can be changed after creation. Lists are denoted by square brackets <code>[]</code> and can hold a mix of data types, such as numbers, strings, or other lists. They support indexing, slicing, and many useful methods for data manipulation.</p>
+            <pre><code>fruits = ['apple', 'banana', 'cherry']
+numbers = [1, 2, 3, 4, 5]
+mixed = ['apple', 3, 4.5, True]</code></pre>
+            <h4>5. Tuples (tuple)</h4>
+            <p>Tuples are similar to lists but are immutable, meaning their values cannot be changed once created. Tuples are denoted by parentheses <code>()</code>. They are used to store fixed collections of items, which can be of different data types. Tuples are useful when you want to ensure the data remains constant throughout the program.</p>
+            <pre><code>coordinates = (10, 20)
+person = ('John', 25, 'Engineer')</code></pre>
+            <h4>6. Sets (set)</h4>
+            <p>Sets are unordered collections of unique elements. Sets are mutable, meaning you can add or remove elements after their creation, but they do not allow duplicate values. Sets are denoted by curly braces <code>{}</code> and are commonly used for operations like union, intersection, and difference. They are great for storing items where duplicates are not allowed.</p>
+            <pre><code>colors = {'red', 'blue', 'green'}
+unique_numbers = {1, 2, 3, 4, 5}</code></pre>
+            <h4>7. Dictionaries (dict)</h4>
+            <p>Dictionaries are unordered collections of key-value pairs. Each key in a dictionary is unique, and each key maps to a specific value. Dictionaries are mutable and are denoted by curly braces <code>{}</code>, with a colon <code>:</code> separating keys and values. Dictionaries are highly versatile and often used for storing and retrieving data in the form of key-value relationships.</p>
+            <pre><code>person_info = {'name': 'John', 'age': 25, 'profession': 'Engineer'}
+contacts = {'John': '123-456-7890', 'Jane': '987-654-3210'}</code></pre>
+            <h4>8. Booleans (bool)</h4>
+            <p>Booleans are a data type with only two possible values: <code>True</code> or <code>False</code>. They are commonly used for conditions and logical operations. In Python, the boolean values are of type <code>bool</code>.</p>
+            <pre><code>is_active = True
+is_eligible = False</code></pre>
+            <h4>9. None Type (NoneType)</h4>
+            <p>The <code>None</code> type is a special type used to represent the absence of a value or a null value. It is commonly used for default values in function arguments or as a placeholder when a variable or object is yet to be assigned a meaningful value.</p>
+            <pre><code>nothing = None</code></pre>
+            <h3>Type Conversion</h3>
+            <p>Python also supports type conversion, where you can convert one data type to another using built-in functions such as <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>list()</code>, and so on.</p>
+            <pre><code>x = "5"
+y = int(x)  # Converts string to integer</code></pre>
+        </section>
+        <section id="Control_Structures" class="main-section">
+            <header>Control Structures</header>
+            <p>Control structures like if-else and loops help in decision-making and iteration.</p>
+            <ul>
+                <li>If-else statements</li>
+                <li>For loops</li>
+                <li>While loops</li>
+                <li>Break and continue</li>
+                <li>Nested loops</li>
+            </ul>
+        </section>
+        <section id="Functions" class="main-section">
+            <header>Functions</header>
+            <p>Functions help in code reusability.</p>
+            <ul>
+                <li>Defining functions</li>
+                <li>Calling functions</li>
+                <li>Function arguments</li>
+                <li>Return values</li>
+                <li>Lambda functions</li>
+            </ul>
+        </section>
+        <section id="Modules" class="main-section">
+            <header>Modules</header>
+            <p>Python has built-in modules and allows creating custom modules.</p>
+            <ul>
+                <li>Importing modules</li>
+                <li>Standard library modules</li>
+                <li>Third-party modules</li>
+                <li>Creating custom modules</li>
+                <li>Using pip</li>
+            </ul>
+        </section>
+        <section id="File_Handling" class="main-section">
+            <header>File Handling</header>
+            <p>Python can handle files for reading and writing.</p>
+            <ul>
+                <li>Opening files</li>
+                <li>Reading files</li>
+                <li>Writing files</li>
+                <li>Closing files</li>
+                <li>File modes</li>
+            </ul>
+        </section>
+        <section id="Exception_Handling" class="main-section">
+            <header>Exception Handling</header>
+            <p>Python provides a way to handle errors using try-except blocks.</p>
+            <ul>
+                <li>Try-except blocks</li>
+                <li>Handling multiple exceptions</li>
+                <li>Finally block</li>
+                <li>Raising exceptions</li>
+                <li>Custom exceptions</li>
+            </ul>
+        </section>
+        <section id="Object-Oriented_Programming" class="main-section">
+            <header>Object-Oriented Programming</header>
+            <p>Python supports OOP concepts such as classes and objects.</p>
+            <ul>
+                <li>Classes and objects</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Encapsulation</li>
+                <li>Abstraction</li>
+            </ul>
+        </section>
+        <section id="Advanced_Topics" class="main-section">
+            <header>Advanced Topics</header>
+            <p>Python also supports advanced features such as decorators, metaclasses, and concurrency.</p>
+            <pre><code>
+def decorator_function(original_function):
+    def wrapper_function():
+        print("Wrapper executed before {}".format(original_function.__name__))
+        return original_function()
+    return wrapper_function
+
+@decorator_function
+def display():
+    print("Display function ran")
+
+display()
+            </code></pre>
+        </section>
+        <section id="Popular_Libraries" class="main-section">
+            <header>Popular Libraries</header>
+            <p>Python has many popular libraries including NumPy, Pandas, Matplotlib, and TensorFlow.</p>
+            <ul>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>TensorFlow</li>
+                <li>Requests</li>
+            </ul>
+        </section>
+        <section id="Testing_in_Python" class="main-section">
+            <header>Testing in Python</header>
+            <p>Python provides the unittest framework for writing test cases.</p>
+            <pre><code>
+import unittest
+
+class TestMath(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(2 + 2, 4)
+
+if __name__ == '__main__':
+    unittest.main()
+            </code></pre>
+        </section>
+        <section id="Examples" class="main-section">
+            <header>Examples</header>
+            <p>Here is a simple Python script:</p>
+            <pre><code>
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+fibonacci(10)
+            </code></pre>
+        </section>
+    </main>
+</body>
+</html>
